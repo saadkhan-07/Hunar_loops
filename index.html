@@ -63,6 +63,87 @@
                 transform: translateX(0);
             }
         }
+
+        /* Adding professional scroll-triggered animations */
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Scroll animation classes */
+        .scroll-hidden {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .scroll-fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .scroll-fade-left {
+            animation: fadeInLeft 0.8s ease-out forwards;
+        }
+
+        .scroll-fade-right {
+            animation: fadeInRight 0.8s ease-out forwards;
+        }
+
+        .scroll-scale-in {
+            animation: scaleIn 0.8s ease-out forwards;
+        }
+
+        .scroll-slide-up {
+            animation: slideInUp 0.8s ease-out forwards;
+        }
+
+        /* Staggered animation delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-700 { animation-delay: 0.7s; }
+        .delay-800 { animation-delay: 0.8s; }
         
         .hero-pattern {
             background-image: radial-gradient(circle at 1px 1px, rgba(236, 72, 153, 0.1) 1px, transparent 0);
@@ -277,7 +358,7 @@
     <!-- Featured Categories -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 scroll-hidden" data-scroll="fade-in">
                 <h2 class="text-3xl md:text-4xl font-montserrat font-bold text-dark-gray mb-4">Our Collections</h2>
                 <p class="text-lg font-opensans text-accent/70 max-w-2xl mx-auto">
                     From cozy clothing to beautiful home accessories, explore our carefully curated collections of handmade crochet items.
@@ -286,7 +367,7 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Clothing Category -->
-                <div class="bg-gradient-to-br from-cream to-secondary/20 rounded-2xl p-8 card-hover cursor-pointer border border-primary/20" onclick="scrollToSection('clothing')">
+                <div class="bg-gradient-to-br from-cream to-secondary/20 rounded-2xl p-8 card-hover cursor-pointer border border-primary/20 scroll-hidden delay-100" data-scroll="fade-left" onclick="scrollToSection('clothing')">
                     <div class="mb-6">
                         <img src="public/products_images/crochet-top.jpg" 
                              alt="Crochet Clothing" 
@@ -302,7 +383,7 @@
                 </div>
                 
                 <!-- Home Decor Category -->
-                <div class="bg-gradient-to-br from-secondary/20 to-cream rounded-2xl p-8 card-hover cursor-pointer border border-accent/20" onclick="scrollToSection('home-decor')">
+                <div class="bg-gradient-to-br from-secondary/20 to-cream rounded-2xl p-8 card-hover cursor-pointer border border-accent/20 scroll-hidden delay-300" data-scroll="scale-in" onclick="scrollToSection('home-decor')">
                     <div class="mb-6">
                         <img src="public/products_images/storage-basket.jpg" 
                              alt="Crochet Home Decor" 
@@ -318,7 +399,7 @@
                 </div>
                 
                 <!-- Custom Orders Category -->
-                <div class="bg-gradient-to-br from-primary/10 to-secondary/20 rounded-2xl p-8 card-hover cursor-pointer md:col-span-2 lg:col-span-1 border border-secondary/20" onclick="scrollToSection('custom')">
+                <div class="bg-gradient-to-br from-primary/10 to-secondary/20 rounded-2xl p-8 card-hover cursor-pointer md:col-span-2 lg:col-span-1 border border-secondary/20 scroll-hidden delay-500" data-scroll="fade-right" onclick="scrollToSection('custom')">
                     <div class="mb-6">
                         <img src="public/products_images/custom-baby-items.jpg" 
                              alt="Custom Crochet Orders" 
@@ -339,14 +420,14 @@
     <!-- Featured Products -->
     <section id="clothing" class="py-20 bg-gradient-to-b from-white to-cream">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 scroll-hidden" data-scroll="fade-in">
                 <h2 class="text-3xl md:text-4xl font-montserrat font-bold text-dark-gray mb-4">Featured Products</h2>
                 <p class="text-lg font-opensans text-accent/70">Handpicked favorites from our latest collection</p>
             </div>
             
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Product 1 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover scroll-hidden delay-100" data-scroll="scale-in">
                     <img src="public/products_images/crochet-cardigan.jpg" 
                          alt="Crochet Cardigan" 
                          class="w-full h-48 object-cover">
@@ -363,7 +444,7 @@
                 </div>
                 
                 <!-- Product 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover scroll-hidden delay-200" data-scroll="scale-in">
                     <img src="public/products_images/storage-basket.jpg" 
                          alt="Storage Basket" 
                          class="w-full h-48 object-cover">
@@ -380,7 +461,7 @@
                 </div>
                 
                 <!-- Product 3 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover scroll-hidden delay-300" data-scroll="scale-in">
                     <img src="public/products_images/winter-scarf.jpg" 
                          alt="Crochet Scarf" 
                          class="w-full h-48 object-cover">
@@ -397,7 +478,7 @@
                 </div>
                 
                 <!-- Product 4 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover scroll-hidden delay-400" data-scroll="scale-in">
                     <img src="public/products_images/cushion-cover.jpg" 
                          alt="Cushion Cover" 
                          class="w-full h-48 object-cover">
@@ -417,7 +498,7 @@
             <!-- Added second row of featured products -->
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
                 <!-- Product 5 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover scroll-hidden delay-500" data-scroll="scale-in">
                     <img src="public/products_images/crochet-hat.jpg" 
                          alt="Crochet Hat" 
                          class="w-full h-48 object-cover">
@@ -434,7 +515,7 @@
                 </div>
                 
                 <!-- Product 6 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover scroll-hidden delay-600" data-scroll="scale-in">
                     <img src="public/products_images/baby-blanket.jpg" 
                          alt="Baby Blanket" 
                          class="w-full h-48 object-cover">
@@ -451,7 +532,7 @@
                 </div>
                 
                 <!-- Product 7 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover scroll-hidden delay-700" data-scroll="scale-in">
                     <img src="public/products_images/market-bag.jpg" 
                          alt="Market Bag" 
                          class="w-full h-48 object-cover">
@@ -468,7 +549,7 @@
                 </div>
                 
                 <!-- Product 8 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover scroll-hidden delay-800" data-scroll="scale-in">
                     <img src="public/products_images/phone-case.jpg" 
                          alt="Phone Case" 
                          class="w-full h-48 object-cover">
@@ -485,7 +566,7 @@
                 </div>
             </div>
             
-            <div class="text-center mt-12">
+            <div class="text-center mt-12 scroll-hidden" data-scroll="fade-in">
                 <button class="bg-primary hover:bg-accent text-white px-8 py-4 rounded-lg font-opensans font-semibold text-lg transition-all transform hover:scale-105">
                     View All Products
                 </button>
@@ -496,15 +577,15 @@
     <!-- Testimonials -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 scroll-hidden" data-scroll="fade-in">
                 <h2 class="text-3xl md:text-4xl font-montserrat font-bold text-dark-gray mb-4">What Our Customers Say</h2>
                 <p class="text-lg font-opensans text-accent/70">Real stories from our happy customers</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-cream rounded-2xl p-8 text-center">
+                <div class="bg-cream rounded-2xl p-8 text-center scroll-hidden delay-100" data-scroll="slide-up">
                     <div class="mb-6">
-                        <img src="/placeholder.svg?height=80&width=80" 
+                        <img src="public/Reviews/Review(flower).jpg" 
                              alt="Customer" 
                              class="w-16 h-16 rounded-full mx-auto object-cover">
                     </div>
@@ -515,9 +596,9 @@
                     <p class="font-opensans text-dark-gray/60 text-sm">Verified Buyer</p>
                 </div>
                 
-                <div class="bg-cream rounded-2xl p-8 text-center">
+                <div class="bg-cream rounded-2xl p-8 text-center scroll-hidden delay-300" data-scroll="slide-up">
                     <div class="mb-6">
-                        <img src="/placeholder.svg?height=80&width=80" 
+                        <img src="public/Reviews/Review(KeyChain).jpg" 
                              alt="Customer" 
                              class="w-16 h-16 rounded-full mx-auto object-cover">
                     </div>
@@ -528,9 +609,9 @@
                     <p class="font-opensans text-dark-gray/60 text-sm">Custom Order</p>
                 </div>
                 
-                <div class="bg-cream rounded-2xl p-8 text-center">
+                <div class="bg-cream rounded-2xl p-8 text-center scroll-hidden delay-500" data-scroll="slide-up">
                     <div class="mb-6">
-                        <img src="/placeholder.svg?height=80&width=80" 
+                        <img src="public/Reviews/Review(RosePort).jpg" 
                              alt="Customer" 
                              class="w-16 h-16 rounded-full mx-auto object-cover">
                     </div>
@@ -678,23 +759,52 @@
             }
         });
 
-        // Add animation on scroll
-        const observerOptions = {
+        const scrollObserverOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            rootMargin: '0px 0px -100px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const scrollObserver = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in-up');
+                    const element = entry.target;
+                    const animationType = element.getAttribute('data-scroll');
+                    
+                    // Remove scroll-hidden class and add appropriate animation
+                    element.classList.remove('scroll-hidden');
+                    
+                    switch(animationType) {
+                        case 'fade-in':
+                            element.classList.add('scroll-fade-in');
+                            break;
+                        case 'fade-left':
+                            element.classList.add('scroll-fade-left');
+                            break;
+                        case 'fade-right':
+                            element.classList.add('scroll-fade-right');
+                            break;
+                        case 'scale-in':
+                            element.classList.add('scroll-scale-in');
+                            break;
+                        case 'slide-up':
+                            element.classList.add('scroll-slide-up');
+                            break;
+                        default:
+                            element.classList.add('scroll-fade-in');
+                    }
+                    
+                    // Stop observing this element
+                    scrollObserver.unobserve(element);
                 }
             });
-        }, observerOptions);
+        }, scrollObserverOptions);
 
-        // Observe all sections for animation
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
+        // Observe all elements with scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollElements = document.querySelectorAll('[data-scroll]');
+            scrollElements.forEach(element => {
+                scrollObserver.observe(element);
+            });
         });
 
         // Shopping cart functionality (basic)
