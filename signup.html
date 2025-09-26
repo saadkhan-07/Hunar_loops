@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Hunar Loops</title>
+    <title>Sign Up - Hunar Loops</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <script>
@@ -93,7 +93,7 @@
             box-shadow: 0 10px 25px rgba(236, 72, 153, 0.15);
         }
 
-        .login-card {
+        .signup-card {
             backdrop-filter: blur(10px);
             background: rgba(255, 255, 255, 0.95);
         }
@@ -102,28 +102,30 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
+
+        .password-strength {
+            height: 4px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-cream via-white to-secondary/20 hero-pattern min-h-screen flex items-center justify-center relative overflow-auto">
     
-    <!-- Floating decorative elements -->
     <div class="absolute top-20 left-10 w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full floating-element opacity-20"></div>
     <div class="absolute top-40 right-20 w-12 h-12 bg-gradient-to-br from-secondary to-primary rounded-full floating-element opacity-30"></div>
     <div class="absolute bottom-32 left-20 w-20 h-20 bg-gradient-to-br from-accent to-secondary rounded-full floating-element opacity-15"></div>
     <div class="absolute bottom-20 right-10 w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-full floating-element opacity-25"></div>
     
-    <!-- Back button -->
-<a href="index.html" class="absolute top-6 left-6 flex items-center text-dark-gray hover:text-primary transition-colors group">
-    <svg class="w-6 h-6 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-    </svg>
-    <span class="font-opensans font-medium">Home</span>
-</a>
+    <a href="/" class="absolute top-6 left-6 flex items-center text-dark-gray hover:text-primary transition-colors group">
+        <svg class="w-6 h-6 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+        <span class="font-opensans font-medium">Home</span>
+    </a>
 
-    <!-- Main login container -->
     <div class="w-full max-w-md mx-auto px-6 animate-fade-in-up">
         
-        <!-- Logo section -->
         <div class="text-center mb-8">
             <div class="inline-flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg mb-4 animate-pulse-glow">
                 <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
@@ -131,16 +133,28 @@
                 </div>
             </div>
             <h1 class="text-3xl font-montserrat font-black text-dark-gray mb-2">
-                Welcome to <span class="text-primary">Hunar Loops</span>
+                Join <span class="text-primary">Hunar Loops</span>
             </h1>
-            <p class="font-opensans text-dark-gray/70">Log in to your handcrafted world</p>
+            <p class="font-opensans text-dark-gray/70">Sign up to your handcrafted journey</p>
         </div>
 
-        <!-- Login form card -->
-        <div class="login-card rounded-2xl shadow-2xl p-8 border border-primary/20">
+        <div class="signup-card rounded-2xl shadow-2xl p-8 border border-primary/20">
             <form class="space-y-6">
                 
-                <!-- Email field -->
+                <div class="space-y-2">
+                    <label for="fullName" class="block text-sm font-montserrat font-semibold text-dark-gray">
+                        Full Name
+                    </label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        class="w-full px-4 py-3 bg-cream border-2 border-secondary/50 rounded-lg font-opensans text-dark-gray placeholder-dark-gray/50 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all input-focus"
+                        required
+                    >
+                </div>
+
                 <div class="space-y-2">
                     <label for="email" class="block text-sm font-montserrat font-semibold text-dark-gray">
                         Email Address
@@ -155,7 +169,6 @@
                     >
                 </div>
 
-                <!-- Password field -->
                 <div class="space-y-2">
                     <label for="password" class="block text-sm font-montserrat font-semibold text-dark-gray">
                         Password
@@ -165,49 +178,68 @@
                             type="password" 
                             id="password" 
                             name="password"
-                            placeholder="Enter your password"
+                            placeholder="Create a strong password"
                             class="w-full px-4 py-3 bg-cream border-2 border-secondary/50 rounded-lg font-opensans text-dark-gray placeholder-dark-gray/50 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all input-focus pr-12"
                             required
+                            oninput="checkPasswordStrength()"
                         >
-                        <button type="button" onclick="togglePassword()" class="absolute right-3 top-3 text-dark-gray/50 hover:text-primary transition-colors">
-                            <svg id="eye-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <button type="button" onclick="togglePassword('password')" class="absolute right-3 top-3 text-dark-gray/50 hover:text-primary transition-colors">
+                            <svg id="eye-icon-password" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                             </svg>
                         </button>
                     </div>
+                    
+                    <div class="flex space-x-1 mt-2">
+                        <div id="strength-1" class="password-strength flex-1 bg-light-gray"></div>
+                        <div id="strength-2" class="password-strength flex-1 bg-light-gray"></div>
+                        <div id="strength-3" class="password-strength flex-1 bg-light-gray"></div>
+                        <div id="strength-4" class="password-strength flex-1 bg-light-gray"></div>
+                    </div>
+                    <p id="strength-text" class="text-xs font-opensans text-dark-gray/60 mt-1">Password strength: Weak</p>
                 </div>
 
-                <!-- Remember me and forgot password -->
-                <div class="flex items-center justify-between">
-                    <label class="flex items-center">
-                        <input type="checkbox" class="w-4 h-4 text-primary bg-cream border-secondary/50 rounded focus:ring-primary/20 focus:ring-2">
-                        <span class="ml-2 text-sm font-opensans text-dark-gray/70">Remember me</span>
+                <div class="space-y-2">
+                    <label for="confirmPassword" class="block text-sm font-montserrat font-semibold text-dark-gray">
+                        Confirm Password
                     </label>
-                    <a href="#" class="text-sm font-opensans text-primary hover:text-accent transition-colors">
-                        Forgot password?
-                    </a>
+                    <div class="relative">
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            class="w-full px-4 py-3 bg-cream border-2 border-secondary/50 rounded-lg font-opensans text-dark-gray placeholder-dark-gray/50 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all input-focus pr-12"
+                            required
+                            oninput="checkPasswordMatch()"
+                        >
+                        <button type="button" onclick="togglePassword('confirmPassword')" class="absolute right-3 top-3 text-dark-gray/50 hover:text-primary transition-colors">
+                            <svg id="eye-icon-confirm" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <p id="match-text" class="text-xs font-opensans text-dark-gray/60 mt-1"></p>
                 </div>
 
-                <!-- Login button -->
                 <button 
                     type="submit"
                     class="w-full bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white font-montserrat font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary/20"
                 >
-                    Log In
+                    Sign up
                 </button>
 
-                <!-- Divider -->
                 <div class="relative my-6">
                     <div class="absolute inset-0 flex items-center">
                         <div class="w-full border-t border-secondary/50"></div>
                     </div>
                     <div class="relative flex justify-center text-sm">
-                        <span class="px-4 bg-white text-dark-gray/60 font-opensans">Or continue with</span>
+                        <span class="px-4 bg-white text-dark-gray/60 font-opensans">Or sign up with</span>
                     </div>
                 </div>
 
-                <!-- Social login buttons -->
                 <div class="grid grid-cols-2 gap-4">
                     <button 
                         type="button"
@@ -232,19 +264,17 @@
                     </button>
                 </div>
 
-                <!-- Sign up link -->
                 <div class="text-center mt-6">
                     <p class="font-opensans text-dark-gray/70">
-                        Don't have an account? 
-                        <a href="signup.html" class="text-primary hover:text-accent font-semibold transition-colors">
-                            Sign up here
+                        Already have an account? 
+                        <a href="login.html" class="text-primary hover:text-accent font-semibold transition-colors">
+                            Log in here
                         </a>
                     </p>
                 </div>
             </form>
         </div>
 
-        <!-- Footer text -->
         <div class="text-center mt-8">
             <p class="font-opensans text-dark-gray/60 text-sm">
                 © 2025 Hunar Loops. Made with hunar and love.
@@ -254,9 +284,9 @@
 
     <script>
         // Password visibility toggle
-        function togglePassword() {
-            const passwordInput = document.getElementById('password');
-            const eyeIcon = document.getElementById('eye-icon');
+        function togglePassword(fieldId) {
+            const passwordInput = document.getElementById(fieldId);
+            const eyeIcon = document.getElementById(`eye-icon-${fieldId === 'password' ? 'password' : 'confirm'}`);
             
             if (passwordInput.type === 'password') {
                 passwordInput.type = 'text';
@@ -272,32 +302,118 @@
             }
         }
 
+        function checkPasswordStrength() {
+            const password = document.getElementById('password').value;
+            const strengthBars = [
+                document.getElementById('strength-1'),
+                document.getElementById('strength-2'),
+                document.getElementById('strength-3'),
+                document.getElementById('strength-4')
+            ];
+            const strengthText = document.getElementById('strength-text');
+
+            // Reset all bars to default gray color
+            strengthBars.forEach(bar => {
+                bar.style.backgroundColor = '#f3f4f6'; // Light gray color
+            });
+
+            let strength = 0;
+            let strengthLabel = 'Weak';
+            let color = '#ef4444'; // Red
+
+            // Calculate strength based on password criteria
+            if (password.length >= 8) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+            // Determine strength level and color
+            if (strength >= 2) {
+                strengthLabel = 'Fair';
+                color = '#f59e0b'; // Orange
+            }
+            if (strength >= 3) {
+                strengthLabel = 'Good';
+                color = '#10b981'; // Green
+            }
+            if (strength >= 4) {
+                strengthLabel = 'Strong';
+                color = '#059669'; // Dark green
+            }
+
+            // Update strength bars with proper colors
+            for (let i = 0; i < Math.min(strength, 4); i++) {
+                strengthBars[i].style.backgroundColor = color;
+            }
+
+            // Update strength text
+            strengthText.textContent = `Password strength: ${strengthLabel}`;
+            strengthText.style.color = color;
+
+            console.log('[v0] Password strength updated:', strengthLabel, 'Bars filled:', Math.min(strength, 4));
+        }
+
+        // Password match checker
+        function checkPasswordMatch() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const matchText = document.getElementById('match-text');
+
+            if (confirmPassword === '') {
+                matchText.textContent = '';
+                return;
+            }
+
+            if (password === confirmPassword) {
+                matchText.textContent = 'Passwords match ✓';
+                matchText.style.color = '#10b981';
+            } else {
+                matchText.textContent = 'Passwords do not match';
+                matchText.style.color = '#ef4444';
+            }
+        }
+
         // Form submission handler
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // Check if passwords match
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+
             // Add loading state to button
             const submitBtn = document.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Logging in...';
+            submitBtn.textContent = 'Creating Account...';
             submitBtn.disabled = true;
             
-            // Simulate login process
+            // Simulate signup process
             setTimeout(() => {
                 // Show success message
                 const notification = document.createElement('div');
                 notification.className = 'fixed top-4 right-4 bg-primary text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in-up';
-                notification.textContent = 'Welcome back to Hunar Loops!';
+                notification.textContent = 'Welcome to Hunar Loops! Please check your email to verify your account.';
                 document.body.appendChild(notification);
                 
                 // Reset button
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
                 
-                // Remove notification after 3 seconds
+                // Reset form
+                document.querySelector('form').reset();
+                checkPasswordStrength();
+                checkPasswordMatch();
+                
+                // Remove notification after 5 seconds
                 setTimeout(() => {
                     notification.remove();
-                }, 3000);
+                }, 5000);
             }, 2000);
         });
 
