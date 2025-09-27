@@ -46,7 +46,8 @@
       }
 
       @keyframes float {
-        0%, 100% {
+        0%,
+        100% {
           transform: translateY(0px);
         }
         50% {
@@ -93,8 +94,12 @@
         animation: scaleIn 0.8s ease-out forwards;
       }
 
-      .delay-200 { animation-delay: 0.2s; }
-      .delay-400 { animation-delay: 0.4s; }
+      .delay-200 {
+        animation-delay: 0.2s;
+      }
+      .delay-400 {
+        animation-delay: 0.4s;
+      }
 
       .hero-pattern {
         background-image: radial-gradient(
@@ -153,40 +158,120 @@
       <div class="p-6">
         <div class="flex items-center justify-between mb-8">
           <div class="flex items-center">
-            <div class="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center">
-              <img src="public/logo.jpg" alt="Hunar Loops Logo" class="w-full h-full object-cover" />
+            <div
+              class="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center"
+            >
+              <img
+                src="public/logo.jpg"
+                alt="Hunar Loops Logo"
+                class="w-full h-full object-cover"
+              />
             </div>
-            <span class="ml-3 text-lg font-montserrat font-bold text-dark-gray">Hunar Loops</span>
+            <span class="ml-3 text-lg font-montserrat font-bold text-dark-gray"
+              >Hunar Loops</span
+            >
           </div>
-          <button onclick="closeMobileMenu()" class="p-2 text-dark-gray hover:text-primary">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          <button
+            onclick="closeMobileMenu()"
+            class="p-2 text-dark-gray hover:text-primary"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
             </svg>
           </button>
         </div>
 
         <nav class="space-y-4">
-          <a href="index.html" onclick="closeMobileMenu()" class="block text-dark-gray hover:text-primary transition-colors font-opensans font-medium py-2">Home</a>
-          
+          <a
+            href="index.html"
+            onclick="closeMobileMenu()"
+            class="block text-dark-gray hover:text-primary transition-colors font-opensans font-medium py-2"
+            >Home</a
+          >
+
           <div class="space-y-2">
-            <button onclick="toggleMobileSideDropdown()" class="text-dark-gray hover:text-primary transition-colors font-opensans font-medium flex items-center justify-between w-full py-2">
+            <button
+              onclick="toggleMobileSideDropdown()"
+              class="text-dark-gray hover:text-primary transition-colors font-opensans font-medium flex items-center justify-between w-full py-2"
+            >
               Shop
-              <svg id="mobile-side-dropdown-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              <svg
+                id="mobile-side-dropdown-arrow"
+                class="w-4 h-4 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
               </svg>
             </button>
             <div id="mobile-side-dropdown" class="hidden pl-4 space-y-2">
-              <a href="#wallets" onclick="closeMobileMenu()" class="block text-dark-gray hover:text-primary transition-colors font-opensans py-1">Wallets</a>
-              <a href="#accessories" onclick="closeMobileMenu()" class="block text-dark-gray hover:text-primary transition-colors font-opensans py-1">Accessories</a>
-              <a href="#clothes" onclick="closeMobileMenu()" class="block text-dark-gray hover:text-primary transition-colors font-opensans py-1">Clothes</a>
-              <a href="#keychains" onclick="closeMobileMenu()" class="block text-dark-gray hover:text-primary transition-colors font-opensans py-1">Keychains</a>
-              <a href="#custom" onclick="closeMobileMenu()" class="block text-dark-gray hover:text-primary transition-colors font-opensans py-1">Customized Products</a>
+              <a
+                href="#wallets"
+                onclick="closeMobileMenu()"
+                class="block text-dark-gray hover:text-primary transition-colors font-opensans py-1"
+                >Wallets</a
+              >
+              <a
+                href="#accessories"
+                onclick="closeMobileMenu()"
+                class="block text-dark-gray hover:text-primary transition-colors font-opensans py-1"
+                >Accessories</a
+              >
+              <a
+                href="#clothes"
+                onclick="closeMobileMenu()"
+                class="block text-dark-gray hover:text-primary transition-colors font-opensans py-1"
+                >Clothes</a
+              >
+              <a
+                href="#keychains"
+                onclick="closeMobileMenu()"
+                class="block text-dark-gray hover:text-primary transition-colors font-opensans py-1"
+                >Keychains</a
+              >
+              <a
+                href="#custom"
+                onclick="closeMobileMenu()"
+                class="block text-dark-gray hover:text-primary transition-colors font-opensans py-1"
+                >Customized Products</a
+              >
             </div>
           </div>
 
-          <a href="about.html" onclick="closeMobileMenu()" class="block text-primary transition-colors font-opensans font-medium py-2">About</a>
-          <a href="#contact" onclick="closeMobileMenu()" class="block text-dark-gray hover:text-primary transition-colors font-opensans font-medium py-2">Contact</a>
-          <a href="login.html" onclick="closeMobileMenu()" class="block text-dark-gray hover:text-primary transition-colors font-opensans font-medium py-2">Login</a>
+          <a
+            href="about.html"
+            onclick="closeMobileMenu()"
+            class="block text-primary transition-colors font-opensans font-medium py-2"
+            >About</a
+          >
+          <a
+            href="#contact"
+            onclick="closeMobileMenu()"
+            class="block text-dark-gray hover:text-primary transition-colors font-opensans font-medium py-2"
+            >Contact</a
+          >
+          <a
+            href="login.html"
+            onclick="closeMobileMenu()"
+            class="block text-dark-gray hover:text-primary transition-colors font-opensans font-medium py-2"
+            >Login</a
+          >
         </nav>
       </div>
     </div>
@@ -194,163 +279,404 @@
     <header class="bg-white shadow-sm sticky top-0 z-30">
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-           
           <div class="md:hidden flex items-center justify-between w-full">
-            <button onclick="openMobileMenu()" class="p-2 text-dark-gray hover:text-primary">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <button
+              onclick="openMobileMenu()"
+              class="p-2 text-dark-gray hover:text-primary"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
               </svg>
             </button>
 
             <div class="flex items-center">
-              <div class="w-18 h-16 rounded-full overflow-hidden flex items-center justify-center">
-                <img src="public/logo.jpg" alt="Hunar Loops Logo" class="w-full h-full object-cover" />
+              <div
+                class="w-18 h-16 rounded-full overflow-hidden flex items-center justify-center"
+              >
+                <img
+                  src="public/logo.jpg"
+                  alt="Hunar Loops Logo"
+                  class="w-full h-full object-cover"
+                />
               </div>
-              <span class="ml-2 text-lg font-montserrat font-bold text-dark-gray">Hunar Loops</span>
+              <span
+                class="ml-2 text-lg font-montserrat font-bold text-dark-gray"
+                >Hunar Loops</span
+              >
             </div>
 
             <div class="flex items-center space-x-2">
-              <a href="login.html" class="p-2 text-dark-gray hover:text-primary transition-colors" title="Login">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+              <a
+                href="login.html"
+                class="p-2 text-dark-gray hover:text-primary transition-colors"
+                title="Login"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  ></path>
                 </svg>
               </a>
-              <button class="relative p-2 text-dark-gray hover:text-primary transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5 6m0 0h9m-9 0V19a2 2 0 002 2h7a2 2 0 002-2v-4"></path>
+              <button
+                class="relative p-2 text-dark-gray hover:text-primary transition-colors"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5 6m0 0h9m-9 0V19a2 2 0 002 2h7a2 2 0 002-2v-4"
+                  ></path>
                 </svg>
-                <span class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                <span
+                  class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+                  >0</span
+                >
               </button>
             </div>
           </div>
 
           <div class="hidden md:flex items-center">
-            <div class="w-18 h-16 rounded-full overflow-hidden flex items-center justify-center">
-              <img src="public/logo.jpg" alt="Hunar Loops Logo" class="w-full h-full object-cover" />
+            <div
+              class="w-18 h-16 rounded-full overflow-hidden flex items-center justify-center"
+            >
+              <img
+                src="public/logo.jpg"
+                alt="Hunar Loops Logo"
+                class="w-full h-full object-cover"
+              />
             </div>
-            <span class="ml-3 text-xl font-montserrat font-bold text-dark-gray">Hunar Loops</span>
+            <span class="ml-3 text-xl font-montserrat font-bold text-dark-gray"
+              >Hunar Loops</span
+            >
           </div>
 
           <div class="hidden md:flex items-center space-x-8">
-            <a href="index.html" class="text-dark-gray hover:text-primary transition-colors font-opensans font-medium">Home</a>
-            
+            <a
+              href="index.html"
+              class="text-dark-gray hover:text-primary transition-colors font-opensans font-medium"
+              >Home</a
+            >
+
             <div class="relative" id="desktop-shop-container">
-              <button id="desktop-shop-btn" class="text-dark-gray hover:text-primary transition-colors font-opensans font-medium flex items-center group">
+              <button
+                id="desktop-shop-btn"
+                class="text-dark-gray hover:text-primary transition-colors font-opensans font-medium flex items-center group"
+              >
                 Shop
-                <svg id="desktop-dropdown-arrow" class="w-4 h-4 ml-1 transition-transform group-hover:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                <svg
+                  id="desktop-dropdown-arrow"
+                  class="w-4 h-4 ml-1 transition-transform group-hover:text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
                 </svg>
               </button>
-              
-              <div id="desktop-dropdown-menu" class="dropdown-menu absolute top-full left-0 mt-3 w-72 bg-white rounded-xl shadow-2xl border border-gray-100 py-4 z-50">
+
+              <div
+                id="desktop-dropdown-menu"
+                class="dropdown-menu absolute top-full left-0 mt-3 w-72 bg-white rounded-xl shadow-2xl border border-gray-100 py-4 z-50"
+              >
                 <div class="px-6 py-2 border-b border-gray-100">
-                  <h3 class="text-sm font-montserrat font-semibold text-dark-gray uppercase tracking-wide">Shop Categories</h3>
+                  <h3
+                    class="text-sm font-montserrat font-semibold text-dark-gray uppercase tracking-wide"
+                  >
+                    Shop Categories
+                  </h3>
                 </div>
                 <div class="py-2">
-                  <a href="#wallets" class="group flex items-center px-6 py-3 text-dark-gray hover:bg-gradient-to-r hover:from-cream hover:to-secondary/10 hover:text-primary transition-all duration-200 font-opensans">
-                    <div class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-primary/20 transition-colors">
-                      <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                  <a
+                    href="#wallets"
+                    class="group flex items-center px-6 py-3 text-dark-gray hover:bg-gradient-to-r hover:from-cream hover:to-secondary/10 hover:text-primary transition-all duration-200 font-opensans"
+                  >
+                    <div
+                      class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-primary/20 transition-colors"
+                    >
+                      <svg
+                        class="w-4 h-4 text-primary"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                        ></path>
                       </svg>
                     </div>
                     <div>
                       <div class="font-medium">Wallets</div>
-                      <div class="text-xs text-gray-500">Handcrafted purses & wallets</div>
+                      <div class="text-xs text-gray-500">
+                        Handcrafted purses & wallets
+                      </div>
                     </div>
                   </a>
-                  <a href="#accessories" class="group flex items-center px-6 py-3 text-dark-gray hover:bg-gradient-to-r hover:from-cream hover:to-secondary/10 hover:text-primary transition-all duration-200 font-opensans">
-                    <div class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-primary/20 transition-colors">
-                      <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                  <a
+                    href="#accessories"
+                    class="group flex items-center px-6 py-3 text-dark-gray hover:bg-gradient-to-r hover:from-cream hover:to-secondary/10 hover:text-primary transition-all duration-200 font-opensans"
+                  >
+                    <div
+                      class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-primary/20 transition-colors"
+                    >
+                      <svg
+                        class="w-4 h-4 text-primary"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"
+                        ></path>
                       </svg>
                     </div>
                     <div>
                       <div class="font-medium">Accessories</div>
-                      <div class="text-xs text-gray-500">Bags, scarves & more</div>
+                      <div class="text-xs text-gray-500">
+                        Bags, scarves & more
+                      </div>
                     </div>
                   </a>
-                  <a href="#clothes" class="group flex items-center px-6 py-3 text-dark-gray hover:bg-gradient-to-r hover:from-cream hover:to-secondary/10 hover:text-primary transition-all duration-200 font-opensans">
-                    <div class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-primary/20 transition-colors">
-                      <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                  <a
+                    href="#clothes"
+                    class="group flex items-center px-6 py-3 text-dark-gray hover:bg-gradient-to-r hover:from-cream hover:to-secondary/10 hover:text-primary transition-all duration-200 font-opensans"
+                  >
+                    <div
+                      class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-primary/20 transition-colors"
+                    >
+                      <svg
+                        class="w-4 h-4 text-primary"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                        ></path>
                       </svg>
                     </div>
                     <div>
                       <div class="font-medium">Clothes</div>
-                      <div class="text-xs text-gray-500">Sweaters, cardigans & tops</div>
+                      <div class="text-xs text-gray-500">
+                        Sweaters, cardigans & tops
+                      </div>
                     </div>
                   </a>
-                  <a href="#keychains" class="group flex items-center px-6 py-3 text-dark-gray hover:bg-gradient-to-r hover:from-cream hover:to-secondary/10 hover:text-primary transition-all duration-200 font-opensans">
-                    <div class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-primary/20 transition-colors">
-                      <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a3 3 0 11-6 0 3 3 0 016 0zM10 11h4l2 2-4 4-2-2v-4z"></path>
+                  <a
+                    href="#keychains"
+                    class="group flex items-center px-6 py-3 text-dark-gray hover:bg-gradient-to-r hover:from-cream hover:to-secondary/10 hover:text-primary transition-all duration-200 font-opensans"
+                  >
+                    <div
+                      class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-primary/20 transition-colors"
+                    >
+                      <svg
+                        class="w-4 h-4 text-primary"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 7a3 3 0 11-6 0 3 3 0 016 0zM10 11h4l2 2-4 4-2-2v-4z"
+                        ></path>
                       </svg>
                     </div>
                     <div>
                       <div class="font-medium">Keychains</div>
-                      <div class="text-xs text-gray-500">Cute & functional keychains</div>
+                      <div class="text-xs text-gray-500">
+                        Cute & functional keychains
+                      </div>
                     </div>
                   </a>
-                  <a href="#custom" class="group flex items-center px-6 py-3 text-dark-gray hover:bg-gradient-to-r hover:from-cream hover:to-secondary/10 hover:text-primary transition-all duration-200 font-opensans">
-                    <div class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-primary/20 transition-colors">
-                      <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a1 1 0 01-1-1V9a1 1 0 011-1h1a2 2 0 100-4H4a1 1 0 01-1-1V4a1 1 0 011-1h3a1 1 0 001-1v-1a2 2 0 114 0z"></path>
+                  <a
+                    href="#custom"
+                    class="group flex items-center px-6 py-3 text-dark-gray hover:bg-gradient-to-r hover:from-cream hover:to-secondary/10 hover:text-primary transition-all duration-200 font-opensans"
+                  >
+                    <div
+                      class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-primary/20 transition-colors"
+                    >
+                      <svg
+                        class="w-4 h-4 text-primary"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a1 1 0 01-1-1V9a1 1 0 011-1h1a2 2 0 100-4H4a1 1 0 01-1-1V4a1 1 0 011-1h3a1 1 0 001-1v-1a2 2 0 114 0z"
+                        ></path>
                       </svg>
                     </div>
                     <div>
                       <div class="font-medium">Custom Orders</div>
-                      <div class="text-xs text-gray-500">Personalized creations</div>
+                      <div class="text-xs text-gray-500">
+                        Personalized creations
+                      </div>
                     </div>
                   </a>
                 </div>
-                <div class="px-6 py-3 border-t border-gray-100 bg-gradient-to-r from-cream to-secondary/5">
-                  <a href="catalogue.html" class="text-primary hover:text-accent font-opensans font-medium text-sm flex items-center justify-center">
+                <div
+                  class="px-6 py-3 border-t border-gray-100 bg-gradient-to-r from-cream to-secondary/5"
+                >
+                  <a
+                    href="catalogue.html"
+                    class="text-primary hover:text-accent font-opensans font-medium text-sm flex items-center justify-center"
+                  >
                     View All Products
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    <svg
+                      class="w-4 h-4 ml-1"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
                     </svg>
                   </a>
                 </div>
               </div>
             </div>
-            
-            <a href="about.html" class="text-primary transition-colors font-opensans font-medium">About</a>
-            <a href="#contact" class="text-dark-gray hover:text-primary transition-colors font-opensans font-medium">Contact</a>
+
+            <a
+              href="about.html"
+              class="text-primary transition-colors font-opensans font-medium"
+              >About</a
+            >
+            <a
+              href="#contact"
+              class="text-dark-gray hover:text-primary transition-colors font-opensans font-medium"
+              >Contact</a
+            >
           </div>
 
           <div class="hidden md:flex items-center space-x-4">
             <div class="relative">
-              <input type="text" placeholder="Search products..." class="w-64 px-4 py-2 bg-cream rounded-lg border border-light-gray focus:outline-none focus:ring-2 focus:ring-primary/20 font-opensans" />
+              <input
+                type="text"
+                placeholder="Search products..."
+                class="w-64 px-4 py-2 bg-cream rounded-lg border border-light-gray focus:outline-none focus:ring-2 focus:ring-primary/20 font-opensans"
+              />
               <button class="absolute right-2 top-2 text-primary">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
                 </svg>
               </button>
             </div>
-            <a href="login.html" class="relative p-2 text-dark-gray hover:text-primary transition-colors" title="Login">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            <a
+              href="login.html"
+              class="relative p-2 text-dark-gray hover:text-primary transition-colors"
+              title="Login"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                ></path>
               </svg>
             </a>
-            <button class="relative p-2 text-dark-gray hover:text-primary transition-colors">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5 6m0 0h9m-9 0V19a2 2 0 002 2h7a2 2 0 002-2v-4"></path>
+            <button
+              class="relative p-2 text-dark-gray hover:text-primary transition-colors"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5 6m0 0h9m-9 0V19a2 2 0 002 2h7a2 2 0 002-2v-4"
+                ></path>
               </svg>
-              <span class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+              <span
+                class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+                >0</span
+              >
             </button>
           </div>
         </div>
       </nav>
     </header>
 
-    <section class="relative bg-gradient-to-br from-cream via-white to-secondary/20 hero-pattern py-20">
+    <section
+      class="relative bg-gradient-to-br from-cream via-white to-secondary/20 hero-pattern py-20"
+    >
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="animate-fade-in-up">
-          <h1 class="text-4xl md:text-5xl font-montserrat font-black text-dark-gray mb-6">
+          <h1
+            class="text-4xl md:text-5xl font-montserrat font-black text-dark-gray mb-6"
+          >
             About <span class="text-primary">Hunar Loops</span>
           </h1>
-          <p class="text-xl font-opensans text-dark-gray/80 mb-8 leading-relaxed max-w-3xl mx-auto">
-            We're passionate artisans creating beautiful handmade crochet pieces that bring warmth, style, and personality to your life.
+          <p
+            class="text-xl font-opensans text-dark-gray/80 mb-8 leading-relaxed max-w-3xl mx-auto"
+          >
+            We're passionate artisans creating beautiful handmade crochet pieces
+            that bring warmth, style, and personality to your life.
           </p>
         </div>
       </div>
@@ -360,19 +686,34 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div class="scroll-hidden" data-scroll="fade-left">
-            <h2 class="text-3xl font-montserrat font-bold text-dark-gray mb-6">Our Story</h2>
+            <h2 class="text-3xl font-montserrat font-bold text-dark-gray mb-6">
+              Our Story
+            </h2>
             <p class="font-opensans text-dark-gray/80 mb-6 leading-relaxed">
-              Founded with a love for traditional craftsmanship, Hunar Loops transforms simple yarn into extraordinary pieces. Each creation tells a story of dedication, skill, and artistic vision.
+              Founded with a love for traditional craftsmanship, Hunar Loops
+              transforms simple yarn into extraordinary pieces. Each creation
+              tells a story of dedication, skill, and artistic vision.
             </p>
             <p class="font-opensans text-dark-gray/80 leading-relaxed">
-              From cozy clothing to beautiful home accessories, we believe handmade items carry a special warmth that mass-produced goods simply cannot match.
+              From cozy clothing to beautiful home accessories, we believe
+              handmade items carry a special warmth that mass-produced goods
+              simply cannot match.
             </p>
           </div>
           <div class="scroll-hidden delay-200" data-scroll="scale-in">
             <div class="relative animate-float">
-              <img src="public/products_images/home-decor-set.jpg" alt="Handmade crochet process" class="w-full h-80 object-cover rounded-2xl shadow-lg" />
-              <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-primary to-accent rounded-full w-20 h-20 flex items-center justify-center shadow-lg">
-                <span class="text-white font-montserrat font-bold text-xs text-center">Hand<br/>Made</span>
+              <img
+                src="public/products_images/home-decor-set.jpg"
+                alt="Handmade crochet process"
+                class="w-full h-80 object-cover rounded-2xl shadow-lg"
+              />
+              <div
+                class="absolute -bottom-4 -right-4 bg-gradient-to-r from-primary to-accent rounded-full w-20 h-20 flex items-center justify-center shadow-lg"
+              >
+                <span
+                  class="text-white font-montserrat font-bold text-xs text-center"
+                  >Hand<br />Made</span
+                >
               </div>
             </div>
           </div>
@@ -383,92 +724,106 @@
     <section class="py-16 bg-gradient-to-b from-white to-cream">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 scroll-hidden" data-scroll="fade-in">
-          <h2 class="text-3xl font-montserrat font-bold text-dark-gray mb-4">What We Stand For</h2>
+          <h2 class="text-3xl font-montserrat font-bold text-dark-gray mb-4">
+            What We Stand For
+          </h2>
         </div>
-        
+
         <div class="grid md:grid-cols-3 gap-8">
           <div class="text-center scroll-hidden" data-scroll="scale-in">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-montserrat font-semibold text-dark-gray mb-3">Made with Love</h3>
-            <p class="font-opensans text-dark-gray/70">Every stitch is crafted with care and attention to detail.</p>
+            <h3
+              class="text-xl font-montserrat font-semibold text-dark-gray mb-3"
+            >
+              Made with Love
+            </h3>
+            <p class="font-opensans text-dark-gray/70">
+              Every stitch is crafted with care and attention to detail.
+            </p>
           </div>
-          
-          <div class="text-center scroll-hidden delay-200" data-scroll="scale-in">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+
+          <div
+            class="text-center scroll-hidden delay-200"
+            data-scroll="scale-in"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-montserrat font-semibold text-dark-gray mb-3">Quality First</h3>
-            <p class="font-opensans text-dark-gray/70">We use only the finest materials for lasting beauty.</p>
+            <h3
+              class="text-xl font-montserrat font-semibold text-dark-gray mb-3"
+            >
+              Quality First
+            </h3>
+            <p class="font-opensans text-dark-gray/70">
+              We use only the finest materials for lasting beauty.
+            </p>
           </div>
-          
-          <div class="text-center scroll-hidden delay-400" data-scroll="scale-in">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a1 1 0 01-1-1V9a1 1 0 011-1h1a2 2 0 100-4H4a1 1 0 01-1-1V4a1 1 0 011-1h3a1 1 0 001-1v-1a2 2 0 114 0z"></path>
+
+          <div
+            class="text-center scroll-hidden delay-400"
+            data-scroll="scale-in"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a1 1 0 01-1-1V9a1 1 0 011-1h1a2 2 0 100-4H4a1 1 0 01-1-1V4a1 1 0 011-1h3a1 1 0 001-1v-1a2 2 0 114 0z"
+                ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-montserrat font-semibold text-dark-gray mb-3">Custom Creations</h3>
-            <p class="font-opensans text-dark-gray/70">Personalized pieces that reflect your unique style.</p>
+            <h3
+              class="text-xl font-montserrat font-semibold text-dark-gray mb-3"
+            >
+              Custom Creations
+            </h3>
+            <p class="font-opensans text-dark-gray/70">
+              Personalized pieces that reflect your unique style.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <footer id="contact" class="bg-dark-gray text-white py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-4 gap-8">
-          <div class="md:col-span-2">
-            <div class="flex items-center mb-4">
-              <div class="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-white">
-                <img src="public/logo.jpg" alt="Hunar Loops Logo" class="w-full h-full object-cover" />
-              </div>
-              <span class="ml-3 text-xl font-montserrat font-bold">Hunar Loops</span>
-            </div>
-            <p class="font-opensans text-white/80 mb-6 max-w-md">
-              Creating beautiful, handmade crochet pieces that bring warmth and style to your life. Each item is crafted with love and attention to detail.
-            </p>
-            <div class="flex space-x-4">
-              <a href="https://www.instagram.com/hunar_loops?igsh=ZG9tem5rdXBwc3U=" target="_blank" class="text-white/60 hover:text-primary transition-colors">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-4.358-.2-6.78 2.618-6.98 6.98-.058 1.281-.073 1.689-.073 4.948 0 3.205.013 3.663.072 4.948.149 3.227 1.664 4.771 4.919 4.919 1.266.057 1.69.073 4.948.073 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.204-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h3 class="font-montserrat font-semibold text-lg mb-4">Quick Links</h3>
-            <ul class="space-y-2 font-opensans">
-              <li><a href="index.html" class="text-white/80 hover:text-primary transition-colors">Home</a></li>
-              <li><a href="#clothing" class="text-white/80 hover:text-primary transition-colors">Clothing</a></li>
-              <li><a href="#home-decor" class="text-white/80 hover:text-primary transition-colors">Home Decor</a></li>
-              <li><a href="#custom" class="text-white/80 hover:text-primary transition-colors">Custom Orders</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="font-montserrat font-semibold text-lg mb-4">Contact Info</h3>
-            <ul class="space-y-2 font-opensans text-white/80">
-              <li>Email: hunarloops@gmail.com</li>
-              <li>Phone: +1 (555) 123-4567</li>
-              <li>Address: Based in Lahore</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="border-t border-white/20 mt-12 pt-8 text-center">
-          <p class="font-opensans text-white/60">
-            © 2025 Hunar Loops. All rights reserved. Made with hunar and love.
-          </p>
-        </div>
-      </div>
-    </footer>
+    <div id="footer"></div>
 
     <script>
       function setupHoverDropdown() {
@@ -569,6 +924,13 @@
           scrollObserver.observe(element);
         });
       });
+
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        })
+        .catch((err) => console.error("Error loading footer:", err));
     </script>
   </body>
 </html>
